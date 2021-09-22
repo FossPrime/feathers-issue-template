@@ -32,9 +32,10 @@ body:
   - type: textarea
     id: reproduction-steps
     attributes:
-      label: What happened?
-      description: Tell us what broke. The more detailed the better.
-      placeholder: Tell us what you see!
+      label: Steps to Reproduce
+      description: Tell us what you see!
+      value: |
+        Tell us what broke. The more detailed the better.
     validations:
       required: true
   - type: textarea
@@ -59,7 +60,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: Version
+      label: Feathers Version
       description: What version of Feathers are you running?
     validations:
       required: true
@@ -74,6 +75,19 @@ body:
         - Safari
         - Other
         - Does not apply
+  - type: textarea
+    id: sysconfig
+    attributes:
+      label: System Configuration
+      description: Tell us about the applicable parts of your setup.
+      render: markdown
+      value: |
+        **Module versions** (especially the part that's not working):  
+        **NodeJS version**:  
+        **Operating System**:  
+        **Browser Version**:  
+        **React Native Version**:  
+        **Module Loader**:
   - type: textarea
     id: logs
     attributes:
