@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        First please check that this issue is not already solved as [described 
+        First please check that this issue is not already solved as [described \
         here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
   - type: checkboxes
     id: duplicate-box
