@@ -7,21 +7,20 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: Thank you for contributing to Feathers
+      value: |
+        First please check that this issue is not already solved as [described 
+        here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
   - type: checkboxes
     id: duplicate-box
     attributes:
       label: Contributing
-      description: |
-        First please check that this issue is not already solved as [described
-        here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
       options:
         - label: I searched and did not find any similar issues
           required: true
   - type: input
     id: repro-link
     attributes:
-      label: reproduction-code
+      label: Minimal Reproduction
       description: |
         If you can, please create a simple example that reproduces the issue and link to a gist, jsbin,
         repo, etc. This makes it much easier for us to debug and issues that have a reproducible example
@@ -33,9 +32,10 @@ body:
     id: reproduction-steps
     attributes:
       label: Steps to Reproduce
-      description: Tell us what you see!
+      description: Steps we would need to take to reproduce the issue
       value: |
-        Tell us what broke. The more detailed the better.
+        1. Run npm start
+        2. ...
     validations:
       required: true
   - type: textarea
@@ -44,7 +44,8 @@ body:
       label: What happened?
       description: Tell us what broke. The more detailed the better.
       placeholder: Tell us what you see!
-      value:  
+      value: |
+        Tell us what broke. The more detailed the better.
     validations:
       required: true
   - type: textarea
@@ -52,11 +53,7 @@ body:
     attributes:
       label: Expected behavior
       description: What did you expect to happen?
-      placeholder: Tell us what you see!
-      value: |
-        Tell us what broke. The more detailed the better.        
-    validations:
-      required: true
+      placeholder: Tell us what you expected
   - type: input
     id: version
     attributes:
