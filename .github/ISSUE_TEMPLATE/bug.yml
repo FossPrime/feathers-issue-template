@@ -23,18 +23,19 @@ body:
     id: repro-link
     attributes:
       label: reproduction-code
-      description: If you can, please create a simple example that reproduces the issue and link to a gist, jsbin, repo, etc. This makes it much easier for us to debug and issues that have a reproducible example will get higher priority.
-      options:
-        - label: Link to minimal reproduction
-          required: true
-          placeholder: gist, jsbin, repo, CodeSandbox, Glitch, etc
+      description: |
+        If you can, please create a simple example that reproduces the issue and link to a gist, jsbin,
+        repo, etc. This makes it much easier for us to debug and issues that have a reproducible example
+        will get higher priority.
+      placeholder: gist, jsbin, repo, CodeSandbox, Glitch, etc
+    validations:
+      required: true
   - type: textarea
     id: reproduction-steps
     attributes:
       label: What happened?
       description: Tell us what broke. The more detailed the better.
       placeholder: Tell us what you see!
-      value:  
     validations:
       required: true
   - type: textarea
