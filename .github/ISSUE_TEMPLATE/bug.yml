@@ -13,8 +13,9 @@ body:
     id: duplicate-box
     attributes:
       label: Contributing
-      description: First please check that this issue is not already solved as [described
-here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
+      description: |
+        First please check that this issue is not already solved as [described
+        here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
       options:
         - label: I searched and did not find any similar issues
           required: true
