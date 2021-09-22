@@ -8,32 +8,58 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        
+  - type: checkboxes
+    id: duplicate-box
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Contributing
+      description: First please check that this issue is not already solved as [described
+here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
+      options:
+        - label: I searched and did not find any similar issues
+          required: true
+  - type: input
+    id: repro-link
+    attributes:
+      label: reproduction-code
+      description: If you can, please create a simple example that reproduces the issue and link to a gist, jsbin, repo, etc. This makes it much easier for us to debug and issues that have a reproducible example will get higher priority.
+      options:
+        - label: Link to minimal reproduction
+          required: true
+          placeholder: gist, jsbin, repo, CodeSandbox, Glitch, etc
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: What happened?
+      description: Tell us what broke. The more detailed the better.
+      placeholder: Tell us what you see!
+      value:  
     validations:
-      required: false
+      required: true
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: Tell us what broke. The more detailed the better.
       placeholder: Tell us what you see!
-      value: "A bug happened!"
+      value:  
     validations:
       required: true
-  - type: dropdown
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: Tell us what you see!
+      value: |
+        Tell us what broke. The more detailed the better.        
+    validations:
+      required: true
+  - type: input
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      description: What version of Feathers are you running?
     validations:
       required: true
   - type: dropdown
@@ -45,18 +71,11 @@ body:
         - Firefox
         - Chrome
         - Safari
-        - Microsoft Edge
+        - Other
+        - Does not apply
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
