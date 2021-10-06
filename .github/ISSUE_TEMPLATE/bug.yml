@@ -5,11 +5,6 @@ labels: ["bug", "triage"]
 assignees:
   - octocat
 body:
-  - type: markdown
-    attributes:
-      value: |
-        First please check that this issue is not already solved as [described \
-        here](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug)
   - type: checkboxes
     id: duplicate-box
     attributes:
@@ -45,7 +40,8 @@ body:
       description: Tell us what broke. The more detailed the better.
       placeholder: Tell us what you see!
       value: |
-        Tell us what broke. The more detailed the better.
+        Tell us what broke. The more detailed the better. 
+        Relevant log output, screenshots and code are helpful.
     validations:
       required: true
   - type: textarea
@@ -83,11 +79,20 @@ body:
         **NodeJS version**:  
         **Operating System**:  
         **Browser Version**:  
-        **React Native Version**:  
         **Module Loader**:
-  - type: textarea
-    id: logs
+  - type: checkboxes
+    id: checkboxes
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: Validations
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: Read the [Contributing Guidelines](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug).
+          required: true
+        - label: Read the [docs](https://vitejs.dev/guide).
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/feathersjs/feathers/issues) that reports the same bug to avoid creating a duplicate.
+          required: true
+        - label: Make sure this is a Feathers issue and not an ecosystem or third-party module issue. For example, if it's a MongoDB adapter, Vuex or Redux module related bug, it should likely be reported to https://github.com/orgs/feathersjs-ecosystem/ instead.
+          required: true
+        - label: Check that this is a concrete bug. For Q&A open join our [Chat Server](https://feathersjs.slack.com/messages/D2G5G66CE/).
+          required: true
