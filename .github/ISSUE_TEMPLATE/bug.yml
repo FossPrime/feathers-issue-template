@@ -5,13 +5,6 @@ labels: ["bug", "triage"]
 assignees:
   - octocat
 body:
-  - type: checkboxes
-    id: duplicate-box
-    attributes:
-      label: Contributing
-      options:
-        - label: I searched and did not find any similar issues
-          required: true
   - type: input
     id: repro-link
     attributes:
@@ -88,7 +81,7 @@ body:
       options:
         - label: Read the [Contributing Guidelines](https://github.com/feathersjs/feathers/blob/crow/.github/contributing.md#report-a-bug).
           required: true
-        - label: Read the [docs](https://vitejs.dev/guide).
+        - label: Read the [docs](https://docs.feathersjs.com/).
           required: true
         - label: Check that there isn't [already an issue](https://github.com/feathersjs/feathers/issues) that reports the same bug to avoid creating a duplicate.
           required: true
